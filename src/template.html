@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="loadScreen" style="background-color: rgb(84, 104, 218); 
+    height: 100%; width: 100%; z-index: 3; 
+    position: absolute; justify-content: center; align-items: center; display: flex; color: white; font-weight: bold; font-size: 2rem;"> Loading</div>
+        <header class="headerContainer">
+            <div class="imageContainer"> 
+                <div class="image">
+                    <img src="../src/Images/PNG/Mediamodifier-Design.svg" alt="sunIcon" class="iconSun">
+                </div>
+                <div class="logoTitle">
+                    Climate Cast
+                </div>
+            </div>
+            <div class="infoContainer">
+                <form action="" class="locationForm" id="locationBar">
+                    <div class="formContainer"> 
+                        <label for="searchBar"></label>
+                        <button class="buttonBox">
+                            <img src="../src/Images/PNG/search.svg" alt="searchIcon" class="imgSearch">
+                        </button>
+                        <input type="text" name="locationBar" id="searchBar" placeholder="Search Location">
+                    </div>
+                </form>
+            </div>
+        </header>
+        <main class="MainContainer">
+            <div class="mainWeatherDiv">
+                <div class="title"> Current</div>
+                <div class="WeatherInfoDiv">
+                    <div class="todayTempGroup">
+                        <div class="iconImage">
+                            <img src="../src/Images/PNG/Location-Pin-Map-512.png" alt="icon location" id="iconLocation">
+                        </div>
+                        <div class="header">
+                            Location Name
+                        </div>
+                    </div>
+                    <div class="todayInfoCards">
+                        <div class="todaysDate">
+                            <div class="dayText"> day</div>
+                            <div class="dateText"> todays Date</div>
+                        </div>
+                        <div class="todaysIcon">
+                            
+                        </div>
+                        <div class="todayInfoGroup">
+                            <div class="dayTemp"> </div>
+                            <div class="todaysDescripton">
+                                C
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dailyWeekDiv">
+                <div class="title">Upcoming Forecast</div>
+                <div class="weeklyInfo"> 
+                    <div class="forecastCard" id="weekForecast"> 
+                    </div>
+                </div>
+            </div>
+            <div class="highlightDiv">
+                <div class="title"> Today highlights</div>
+                <div class="highlightWeatherCards">
+                    <div class="highLightCards" id="rainChance">
+                        <div class="cardTitle"> Rain Chance</div>
+                        <div class="cardValue"> 0%</div>
+                        <div class="cardExtra"> Info</div>
+                    </div>
+                    <div class="highLightCards" id="feelsLike">
+                        <div class="cardTitle"> Feels Like</div>
+                        <div class="cardValue"> 0%</div>
+                        <div class="cardExtra"> Info</div>
+                    </div>
+                    <div class="highLightCards" id="humidity">
+                        <div class="cardTitle"> Humidity</div>
+                        <div class="cardValue"> 0%</div>
+                        <div class="cardExtra"> Info</div>
+                    </div>
+                    <div class="highLightCards" id="windSpeed">
+                        <div class="cardTitle"> Wind Gust</div>
+                        <div class="cardValue"> Mph</div>
+                        <div class="cardExtra"> Info</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

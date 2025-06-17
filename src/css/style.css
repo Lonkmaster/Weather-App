@@ -1,0 +1,263 @@
+:root {
+    --paddingBox: 25px;
+    --roundedEdge: 15px;
+    --titleSize: 1.5rem;
+    --dateSize: 2.5rem;
+    --tempSize: 4.5rem;
+    --paddingTopAndBottom: 15px;
+    --backgroundColor: oklch(13% 0.028 261.692);
+    --cardColorOne: oklch(42.4% 0.199 265.638);
+    --cardColorTwo: oklch(0.3 0.05 271.08);
+    --cardColorThree: oklch(0.76 0.12 254.93);
+    --fontColor: white;
+}
+
+body {
+    background-color: var(--backgroundColor);
+}
+
+.imageContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.iconSun {
+    width: 80px;
+    height: 60px;
+}
+
+.logoTitle {
+    font-weight: bold;
+    color: white;
+    font-size: var(--titleSize);
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.locationForm {
+    display: flex;
+    align-items: center;
+}
+
+#searchBar {
+    width: 250px;
+    margin: 0;
+    padding: 8px 8px 8px;
+    height: 30px;
+    border-right: none;
+    font-size: 1rem;
+    border-radius: 10px 0px 0px 10px;
+    outline: none;
+    border-color: var(--backgroundColor);
+}
+
+.buttonBox {
+    font-size: 1rem;
+    padding: 8px 8px 8px;
+    border-radius: 0px 10px 10px 0px;
+    outline: none;
+    border-left: none;
+    background-color: white;
+    border-color: var(--backgroundColor);
+}
+
+.imgSearch {
+    width: 25px;
+}
+
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+#iconLocation {
+    height: 1.5rem;
+    filter: invert();
+}
+
+.weatherIcon {
+    height: 6.5rem;
+    margin-top: 54.5%;
+}
+
+.imageText {
+    font-size: var(--titleSize);
+    padding-bottom: var(--paddingTopAndBottom);
+    padding-top: var(--paddingTopAndBottom);
+}
+
+.todaysDescripton {
+    font-size: var(--titleSize);
+}
+
+.MainContainer {
+    display: grid;
+    margin: 0 auto;
+    max-width: 1400px;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    padding: 25px;
+}
+
+.title {
+    color: var(--fontColor);
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding-bottom: 5px;
+}
+
+.mainWeatherDiv {
+    background-color: var(--cardColorTwo);
+    color: var(--fontColor);
+    padding: var(--paddingBox);
+    border-radius: var(--roundedEdge);
+    grid-row: 1;
+}
+
+.header {
+    font-size: var(--titleSize);
+}
+
+.todaysDate {
+    padding-top: var(--paddingTopAndBottom);
+    padding-bottom: var(--paddingTopAndBottom);
+}
+
+.dayText {
+    font-size: var(--dateSize);
+}
+
+.dayTemp {
+    font-size: var(--tempSize);
+    padding-left: 100px;
+    padding-top: var(--paddingTopAndBottom);
+    padding-bottom: var(--paddingTopAndBottom);
+}
+
+.todayInfoGroup {
+
+}
+
+.WeatherInfoDiv {
+    display: flex;
+    background-color: var(--cardColorThree);
+    border-radius: 8px;
+    height: 80%;
+    flex-direction: column;
+    padding: 20px;
+    padding-left: 40px;
+}
+
+.todayTempGroup {
+    display: flex;
+    gap: 10px;
+}
+
+.todayInfoCards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.todayInfoGroup {
+    height: 200px;
+}
+
+.todaysIcon {
+    padding-left: 100px;
+    grid-column: 2;
+    grid-row: 1/3;
+}
+
+.dailyWeekDiv {
+    background-color: var(--cardColorTwo);
+    padding: var(--paddingBox);
+    border-radius: var(--roundedEdge);
+    grid-column: -1/-3;
+}
+
+.highlightDiv {
+    color: var(--fontColor);
+    background-color: var(--cardColorTwo);
+    grid-row: -1;
+    border-radius: var(--roundedEdge);
+    padding: var(--paddingBox);
+
+}
+
+.highlightWeatherCards {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 20px;
+}
+
+.highLightCards {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: var(--cardColorThree);
+    padding: 10px;
+    border-radius: 15px;
+    height: 90%;
+}
+
+.cardValue {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.forecastCard {
+    display: flex;
+    gap: 10px;
+    padding: var(--paddingBox);
+    border-radius: var(--roundedEdge);
+}
+
+.weekCardContainer {
+    display: flex;
+    color: var(--fontColor);
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: var(--cardColorThree);
+    gap: 15px;
+}
+
+.weekTemp {
+    font-weight: bold;
+    padding-bottom: 10px;
+    border-bottom: 1px solid white;
+}
+
+.weekDescription {
+    height: 60px;
+}
+
+#loadScreen {
+    display: flex;
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#loadScreen[data-active="fade"] {
+    opacity: 0;
+    inset: 0;
+    opacity: 0;
+    transition: 600ms opacity ease-in-out;
+    transition-delay: 600ms;
+}
+
+.mainWeatherDiv, .dailyWeekDiv, .highlightDiv {
+    border: 1px solid rgb(255, 255, 255, 0.1);
+}
