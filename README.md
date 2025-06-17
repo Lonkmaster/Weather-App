@@ -7,3 +7,4 @@ This app fetches real-time weather data.
 Displays temperature, weather conditions and weekly weather.
 
 Live Preview
+https://lonkmaster.github.io/Weather-App/
