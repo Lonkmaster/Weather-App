@@ -4,8 +4,8 @@ async function fetchWeather(url) {
     let response = await fetch(url, {mode: "cors"});
     let data = await response.json();
     let weatherInfo = new weatherData(data);
-    console.log(data);
-    console.log(weatherInfo);
+    //console.log(data);
+    //console.log(weatherInfo);
     weeklyWeather(weatherInfo);
     return weatherInfo;
 }
@@ -14,7 +14,7 @@ function weeklyWeather(data) {
     let dayCount = data.days;
     let todaysIcon = document.querySelector("todaysIcon");
     dom.weekForecast.innerHTML = "";
-    console.log(data.icon);
+    //console.log(data.icon);
     for (let i = 1; i < 8; i++) {
         let findDate = getDate(data.days[i].datetime);
         let infoDiv = document.createElement("div");
